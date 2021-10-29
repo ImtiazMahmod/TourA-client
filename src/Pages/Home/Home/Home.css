@@ -1,0 +1,29 @@
+.banner{
+    background-image: url( 'https://i.ibb.co/G3jGz1V/grid.png'),url('https://i.ibb.co/cvDw2f1/bannner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 33rem;
+    /* background-color: rgb(255, 252, 206); */
+}
+.bannerCompus{
+position: absolute;
+bottom: -10%;
+right: 0;
+animation:spin 30s linear infinite;
+}
+
+@keyframes spin { 
+100% { 
+     transform:rotate(360deg); 
+} 
+}
+
+/* .bannerTitle{
+    position: absolute;
+    top: 10%;   
+} */
+.bannerTitle h1{
+    font-family:Impact, 'Arial Narrow Bold', sans-serif;
+    font-size:4rem;
+    color: #FF682D;
+}
