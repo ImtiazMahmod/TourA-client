@@ -14,7 +14,8 @@ const TourDetails = () => {
     .then(res => {
         setTour(res.data);
     })
-   },[tourId])
+   }, [tourId])
+    console.log(tour);
     return (
         <div>
             <Container className="my-5">
@@ -33,7 +34,7 @@ const TourDetails = () => {
                         }
                     </Col>
                     <Col sm={12} md={4} lg={4}>
-                        <Book/>
+                        <Book>{ tour}</Book>
                     </Col>
                 </Row>
             </Container>

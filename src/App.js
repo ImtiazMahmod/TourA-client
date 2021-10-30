@@ -10,6 +10,7 @@ import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import NavAll from './Pages/Shared/NavAll';
 import TourDetails from './Pages/TourPack/TourDetails/TourDetails';
+import MyTours from './Pages/User/MyTours/MyTours';
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/tour/:tourId">
             <TourDetails/>
+          </PrivateRoute>
+          <PrivateRoute path="/myTours">
+            <MyTours/>
           </PrivateRoute>
 
           <Route path="/login">
