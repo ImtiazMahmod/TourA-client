@@ -10,7 +10,7 @@ const Tour = ({ tour }) => {
             <Card className="tourCard border-0 shadow">
         <Link className="text-decoration-none" to={`/tour/${tour?._id}`}>
                 <div >
-                <Card.Img style={{height: "200px"}} className="img-fluid rounded" variant="top" src={tour?.img} />
+                <Card.Img style={{height: "200px"}} className="img-fluid rounded" variant="top" src={tour?.img1} />
         </div>
         </Link>
         <Card.Body>
@@ -21,8 +21,8 @@ const Tour = ({ tour }) => {
           <Card.Text className="text-secondary text-start border-top py-2">
             {tour?.desc.slice(0,50)}...
                     </Card.Text>
-            <Link to="/placeOrder">
-            <Button onClick="" variant="outline-secondary" >Book Now</Button>
+            <Link to={`/placeOrder/${tour?._id}`}>
+            <Button variant="outline-secondary" >Book Now</Button>
             </Link>
         </Card.Body>
       </Card>

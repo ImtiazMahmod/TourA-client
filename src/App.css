@@ -5,3 +5,7 @@
 .primaryColor{
   color:#FF682D;
 }
+.btnRegular{
+  background-color: tomato;
+  color: white;
+}

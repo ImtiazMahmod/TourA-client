@@ -1,15 +1,20 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
 import './App.css';
+import AuthProvider from './Context/AuthProvider';
 import About from './Pages/About/About';
 import AddTours from './Pages/Admin/AddTours';
 import Home from './Pages/Home/Home/Home';
+import Login from './Pages/Login/Login';
+import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import NavAll from './Pages/Shared/NavAll';
 import TourDetails from './Pages/TourPack/TourDetails/TourDetails';
 
 function App() {
   return (
     <div className="App">
+      <AuthProvider>
       <Router>
         <NavAll />
         <Switch>
@@ -22,19 +27,26 @@ function App() {
           <Route path="/about">
             <About/>
           </Route>
-          <Route path="/addTours">
+          <PrivateRoute path="/addTours">
             <AddTours/>
-          </Route>
-          <Route path="/tour/:tourId">
+          </PrivateRoute>
+          <PrivateRoute path="/placeOrder/:tourId">
+          <PlaceOrder/>
+          </PrivateRoute>
+          <PrivateRoute path="/tour/:tourId">
             <TourDetails/>
-          </Route>
+          </PrivateRoute>
 
+          <Route path="/login">
+            <Login/>
+          </Route>
           <Route>
           {/* <NotFound/> */}
           </Route>
         </Switch>
         {/* <Footer/> */}
       </Router>
+     </AuthProvider>
     </div>
   );
 }

@@ -3,12 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../Hooks/useAuth';
 
 const NavAll = () => {
+  const { user ,logout} = useAuth()
+  
   const icon1 = <FontAwesomeIcon style={{ color: '#FF682D' }} icon={faUserAlt} />
- 
-
-    return (
+  return (
         
   <Container fluid="md">
         <Navbar className="px-4 sticky-top fw-bold"  collapseOnSelect expand="lg"  variant="light">
@@ -23,25 +24,26 @@ const NavAll = () => {
      
             </Nav>
       {/* user  */}
-     <Nav>
-        <NavDropdown title={icon1} id="collapsible-nav-dropdown">
-            <NavDropdown.Item as={Link} to="/myTours">My Tours</NavDropdown.Item>
-            
-            <NavDropdown.Divider />
-            <NavDropdown.Item onClick="">LogOut</NavDropdown.Item>
-                    
-              </NavDropdown>
-              {/* Admin */}
-        <NavDropdown title="Admin" id="collapsible-nav-dropdown" >
-            <NavDropdown.Item as={Link} to="/addTours">Add Tours</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/manageTours">Manage Tours</NavDropdown.Item>
-                <NavDropdown.Divider />
-            <NavDropdown.Item onClick="">LogOut</NavDropdown.Item>
-        </NavDropdown>
-        
-        <Nav.Link as={Link} to="/login">{ icon1} Login</Nav.Link>
-      
-    </Nav>
+         
+             <Nav>
+            {user?.email ?
+              <div className="d-flex justify-content-center">
+                <img width="40" className="img-fluid rounded-circle" src={user?.photoURL} alt="" /> 
+                <p className="fw-normal m-2">{user?.displayName }</p>
+             <NavDropdown className="border-0" title={icon1} id="collapsible-nav-dropdown">
+                 <NavDropdown.Item as={Link} to="/myTours">My Tours</NavDropdown.Item>
+                 <NavDropdown.Item as={Link} to="/addTours">Add Tours</NavDropdown.Item>
+                     <NavDropdown.Item as={Link} to="/manageTours">Manage Tours</NavDropdown.Item>
+               
+                 <NavDropdown.Divider />
+                   <NavDropdown.Item onClick={logout}>LogOut</NavDropdown.Item>
+                 </NavDropdown>  
+              </div> 
+             :
+             <Nav.Link as={Link} to="/login">{ icon1} Login</Nav.Link>
+            }
+            </Nav>
+          
   </Navbar.Collapse>
 </Navbar>
   </Container>

@@ -25,8 +25,11 @@ const AddTours = () => {
     return (
         <Container className="my-5">
             <Row>
-            <Col md={8} className="d-none d-md-block"></Col>
-            <Col sm={12} md={4}>
+          <Col md={6} className="d-none d-md-block ">
+            <img className="mt-5 img-fluid" src="https://i.ibb.co/Hhdw1Vc/tour.jpg" alt="" />
+            
+            </Col>
+            <Col sm={12} md={6}>
            <h3 className="fw-bold my-3">Add New Tour</h3>
     <form className="d-flex flex-column bg-light p-4 rounded" onSubmit={handleSubmit(onSubmit)}>
       
@@ -39,10 +42,14 @@ const AddTours = () => {
         <textarea rows="8"  className={inputStyle} style={{outline: "none"}} placeholder="Description on Tourist Place" {...register("desc", { required: true })} />
       {errors.desc && <span className={errorStyle}>This field is required</span>}
       
-        <input className={inputStyle} style={{outline: "none"}} placeholder="Image URL" {...register("img", { required: true })} />
+        <input className={inputStyle} style={{outline: "none"}} placeholder="Image URL1" {...register("img1", { required: true })} />
+      {errors.img && <span className={errorStyle}>This field is required</span>}
+        <input className={inputStyle} style={{outline: "none"}} placeholder="Image URL2" {...register("img2", { required: true })} />
+      {errors.img && <span className={errorStyle}>This field is required</span>}
+        <input className={inputStyle} style={{outline: "none"}} placeholder="Image URL3" {...register("img3", { required: true })} />
       {errors.img && <span className={errorStyle}>This field is required</span>}
       
-      <input className="btn fw-bold" style={{ backgroundColor:"tomato",color:"white" }} value="Add Tour" type="submit" />
+      <input className="btn fw-bold btnRegular m-2"  value="Add Tour" type="submit" />
     </form>
             
         </Col>
