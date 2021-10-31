@@ -9,6 +9,7 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
+import Footer from './Pages/Shared/Footer/Footer';
 import NavAll from './Pages/Shared/NavAll';
 import TourDetails from './Pages/TourPack/TourDetails/TourDetails';
 import TourPack from './Pages/TourPack/TourPack';
@@ -57,7 +58,7 @@ function App() {
           {/* <NotFound/> */}
           </Route>
         </Switch>
-        {/* <Footer/> */}
+        <Footer/>
       </Router>
      </AuthProvider>
     </div>
