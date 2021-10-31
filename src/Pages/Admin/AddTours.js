@@ -9,7 +9,7 @@ const AddTours = () => {
     const onSubmit = data => {
         console.log(data)
         ///post for add tour
-        axios.post('http://localhost:5000/addTour', data)
+        axios.post('https://obscure-forest-04277.herokuapp.com/addTour', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('WOW, you are added a new Tour.')

@@ -1,0 +1,22 @@
+.bannerStyle{
+    background-image:linear-gradient(rgba(129, 129, 129, 0.5), rgba(78, 78, 78, 0.5)), url('https://i.ibb.co/yVbJzP8/Cox-s-Bazar-sea-beach-01.jpg');
+    background-size: cover;
+    background-color: #2b2b2b;
+    height: 18rem;
+}
+.bannerContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 290px;
+    flex-direction: column;
+}
+.bannersubtitle{
+    font-size: 20px;
+    color: #e0e0e0;
+}
+.bannertitle{
+    font-weight: 700;
+    font-size: 52px;
+    color: white;
+}

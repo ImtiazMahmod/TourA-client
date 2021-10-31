@@ -10,7 +10,7 @@ const PlaceOrder = () => {
     const [tour,setTour]= useState({})
     ///load specific tour
     useEffect(() => {
-        axios.get(`http://localhost:5000/tour/${tourId}`)
+        axios.get(`https://obscure-forest-04277.herokuapp.com/tour/${tourId}`)
         .then(res => {
             setTour(res.data);
         })

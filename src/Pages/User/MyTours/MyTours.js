@@ -11,7 +11,7 @@ const MyTours = () => {
     const [update,setUpdate]= useState(null)
     ///load user matched tours
     useEffect(() => {
-        axios.get(`http://localhost:5000/myTours/${user?.email}`)
+        axios.get(`https://obscure-forest-04277.herokuapp.com/myTours/${user?.email}`)
             .then(res => {
            setMyTours(res.data)
         })
@@ -21,7 +21,7 @@ const MyTours = () => {
     const handleDeleteTour = () => {
         const proceed = window.confirm('Are you sure to delete Tour Package')
         if (proceed) {
-            axios.delete(`http://localhost:5000/deleteMyTour/${user?.email}`)
+            axios.delete(`https://obscure-forest-04277.herokuapp.com/deleteMyTour/${user?.email}`)
             .then(res => {
                 if (res.data.deletedCount) {
                     alert('oh! You are deleted a Tour')
@@ -37,7 +37,7 @@ const MyTours = () => {
     
     return (
         <div>
-            <Container>
+            <Container style={{height:"33rem"}}>
                 <h2 className="primaryColor">My Tours Details</h2>
            <Table responsive bordered hover>
             <thead >

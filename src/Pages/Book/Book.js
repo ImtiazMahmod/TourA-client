@@ -13,7 +13,7 @@ const Book = ({ children }) => {
         data.title = children?.title
     console.log(data)
     ///post for book tour
-    axios.post('http://localhost:5000/bookTour', data)
+    axios.post('https://obscure-forest-04277.herokuapp.com/bookTour', data)
         .then(res => {
             if (res.data.insertedId) {
                 alert('WOW, you are Booked a Tour.')

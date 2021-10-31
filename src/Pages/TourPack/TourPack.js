@@ -11,7 +11,7 @@ const TourPack = () => {
     const [tours, setTours] = useState([])
     ///load all tours 
     useEffect(() => {
-        axios.get('http://localhost:5000/allTour')
+        axios.get('https://obscure-forest-04277.herokuapp.com/allTour')
             .then(res => {
                 if (res.data) {
                     setTours(res.data)
