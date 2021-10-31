@@ -58,7 +58,7 @@ const ManageTourOrders = () => {
     }
     return (
         <div>
-            <Container style={{height:"33rem"}}>
+            <Container style={{height:"35rem"}}>
                 <h2 className="primaryColor">All Ordered Packages</h2>
                 <Table responsive bordered hover>
             <thead >

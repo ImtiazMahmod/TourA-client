@@ -23,16 +23,18 @@ const Login = () => {
     }
     return (
         <div>
-            <Container>
+            <Container className="mt-5" style={{height: "33rem"}}>
                 <Row>
-                    <Col className="my-5 d-flex justify-content-center align-items-center" sm={12} md={6} lg={4}>
-                        <div >
+                    <Col className="my-5 d-flex justify-content-center align-items-center" sm={12} md={4} lg={4}>
+                        <div>
                         <h4 className="fw-bold text-secondary">LogIn With Google</h4>
                         <Button onClick={handleLogin} variant="outline-warning" className="w-100  btnRegular">
                             <FontAwesomeIcon icon={faGoogle} /> Google</Button>
                         </div>
                     </Col>
-                    <Col></Col>
+                    <Col md={8} className="d-none d-md-block">
+                        <img className="rounded img-fluid" src="https://i.ibb.co/NZ4cV7r/saint-martin-aerial-view.jpg" alt="" />
+                    </Col>
                 </Row>
             </Container>
         </div>

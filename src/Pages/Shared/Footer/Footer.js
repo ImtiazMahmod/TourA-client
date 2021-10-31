@@ -11,7 +11,7 @@ const Footer = () => {
             <Container>
                 <Row>
                     <Col sm={12} md={6} lg={3}>
-                        <img className="img-fluid" src="https://i.ibb.co/MBZSKFv/logo.png" alt="" />
+                        <img className="img-fluid" src="https://i.ibb.co/TgYrddh/logo.png" alt="" />
                         <p className="text-secondary">
                         TourA is the leading force that grows and sustains travel and protects the freedom to travel. 
                         </p>

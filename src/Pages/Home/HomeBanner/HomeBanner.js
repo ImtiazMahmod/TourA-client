@@ -13,7 +13,7 @@ const HomeBanner = () => {
               <div >
               <h1 >Amazing Tour In Sajek</h1>
         <h3>3Days,4 Night Trip</h3>
-              <Link to="">
+              <Link to="/tourPackages">
                 <Button className="mt-4" variant="outline-secondary">Book Now</Button>
               </Link>
             </div>

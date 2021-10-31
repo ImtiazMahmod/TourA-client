@@ -37,7 +37,7 @@ const MyTours = () => {
     
     return (
         <div>
-            <Container style={{height:"33rem"}}>
+            <Container style={{height:"35rem"}}>
                 <h2 className="primaryColor">My Tours Details</h2>
            <Table responsive bordered hover>
             <thead >
