@@ -11,14 +11,14 @@ const HomeBanner = () => {
         <Col  sm={12} md={6} className="bannerTitle p-5  text-start">
             <div  style={{ position: 'relative' }}>
               <div >
-              <h1 >Amazing Tour In Madagaskar</h1>
-        <h3>7Days,8 Night Tour</h3>
+              <h1 >Amazing Tour In Sajek</h1>
+        <h3>3Days,4 Night Trip</h3>
               <Link to="">
-                <Button className="mt-4" variant="light">Book Now</Button>
+                <Button className="mt-4" variant="outline-secondary">Book Now</Button>
               </Link>
             </div>
               <div >
-              <img width="30%" className="bannerCompus" src="https://i.ibb.co/rHb1Q2B/compus.png" alt="" />
+              <img width="33%" className="img-fluid" className="bannerCompus" src="https://i.ibb.co/rHb1Q2B/compus.png" alt="" />
               </div>
         </div>
       </Col>

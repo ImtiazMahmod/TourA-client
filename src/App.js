@@ -4,6 +4,7 @@ import './App.css';
 import AuthProvider from './Context/AuthProvider';
 import About from './Pages/About/About';
 import AddTours from './Pages/Admin/AddTours';
+import ManageTourOrders from './Pages/Admin/ManageTour';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
@@ -39,6 +40,9 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/myTours">
             <MyTours/>
+          </PrivateRoute>
+          <PrivateRoute path="/manageOrders">
+            <ManageTourOrders/>
           </PrivateRoute>
 
           <Route path="/login">

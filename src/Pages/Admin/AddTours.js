@@ -18,8 +18,10 @@ const AddTours = () => {
         })
     };
 
-
-
+  const today = new Date().toDateString()
+  const time = new Date().toTimeString()
+  const date = (`${today}  ${time}`).slice(0,22)
+console.log(date);
     const inputStyle = "border-0  border-bottom p-2 m-2 shadow rounded";
     const errorStyle = 'text-danger text-start ms-2';
     return (
@@ -39,13 +41,18 @@ const AddTours = () => {
       <input type="number" className={inputStyle} style={{outline: "none"}} placeholder="Tour Fee" {...register("fee", { required: true })} />      
       {errors.fee && <span className={errorStyle}>This field is required</span>}
       
+      <input  defaultValue={date} className={inputStyle} style={{ outline: "none" }}  {...register("date", { required: true })} />
+      {errors.date && <span className={errorStyle}>This field is required</span>}
+      
         <textarea rows="8"  className={inputStyle} style={{outline: "none"}} placeholder="Description on Tourist Place" {...register("desc", { required: true })} />
       {errors.desc && <span className={errorStyle}>This field is required</span>}
       
         <input className={inputStyle} style={{outline: "none"}} placeholder="Image URL1" {...register("img1", { required: true })} />
       {errors.img && <span className={errorStyle}>This field is required</span>}
-        <input className={inputStyle} style={{outline: "none"}} placeholder="Image URL2" {...register("img2", { required: true })} />
+      
+      <input className={inputStyle} style={{outline: "none"}} placeholder="Image URL2" {...register("img2", { required: true })} />
       {errors.img && <span className={errorStyle}>This field is required</span>}
+      
         <input className={inputStyle} style={{outline: "none"}} placeholder="Image URL3" {...register("img3", { required: true })} />
       {errors.img && <span className={errorStyle}>This field is required</span>}
       

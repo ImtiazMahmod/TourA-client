@@ -1,17 +1,11 @@
 
 const firebaseConfig = {
-
-  apiKey: "AIzaSyAh7KtJAW6qXW-tuogem6JB8btRRj_0R70",
-
-  authDomain: "toura-bd.firebaseapp.com",
-
-  projectId: "toura-bd",
-
-  storageBucket: "toura-bd.appspot.com",
-
-  messagingSenderId: "46828506080",
-
-  appId: "1:46828506080:web:29d7d9194ea6beccf07985"
+  apiKey: process.env.REACT_APP_TOURA_API_KEY,
+  authDomain: process.env.REACT_APP_TOURA_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_TOURA_PROJECT__ID,
+  storageBucket: process.env.REACT_APP_TOURA_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_TOURA_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_TOURA_APP_ID,
 
 };
 export default firebaseConfig;

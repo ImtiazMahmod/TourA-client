@@ -1,0 +1,17 @@
+.tourInfo{
+    background-image: linear-gradient(rgba(129, 129, 129, 0.5), rgba(78, 78, 78, 0.5)),url('https://i.ibb.co/NZ4cV7r/saint-martin-aerial-view.jpg');
+    background-size: cover;
+}
+
+.info{
+    background-color: white;
+    transition: transform ease-in 0.2s;
+}
+.info:hover{
+      transform: translateY(-10px);
+  }
+  .infoIcon{
+    color:#FF682D;
+    margin: 20px auto;
+    font-size: 3rem;
+  }

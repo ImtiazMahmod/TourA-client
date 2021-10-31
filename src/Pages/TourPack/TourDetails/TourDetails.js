@@ -21,8 +21,7 @@ const TourDetails = () => {
             <Container className="my-5">
                 <Row>
                     <Col sm={12} md={8} lg={8} className="mt-3">
-                        {
-                            !tour ? "" :<div>
+                        <div>
                                 <img className="img-fluid rounded" src={tour?.img1} alt="" />
                             <div className="text-start">
                                 <h1 className="mb-3 mt-5">{tour?.title}</h1>
@@ -31,7 +30,7 @@ const TourDetails = () => {
                             <p className="text-secondary">{tour?.desc}</p>
                             </div>
                             </div>
-                        }
+                       
                     </Col>
                     <Col sm={12} md={4} lg={4}>
                         <Book>{ tour}</Book>

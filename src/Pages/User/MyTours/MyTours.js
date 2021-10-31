@@ -1,4 +1,4 @@
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import {  faWindowClose } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import axios from 'axios';
 import React,{useEffect, useState} from 'react';
@@ -23,7 +23,7 @@ const MyTours = () => {
         if (proceed) {
             axios.delete(`http://localhost:5000/deleteMyTour/${user?.email}`)
             .then(res => {
-                if (res.data.deleteCount) {
+                if (res.data.deletedCount) {
                     alert('oh! You are deleted a Tour')
                     setUpdate(true)
                 }
@@ -34,45 +34,36 @@ const MyTours = () => {
         }
     }
 
-    //handle Status to update
-    const handleStatus = () => {
-        const status = 'approved'
-        
-    }
+    
     return (
         <div>
             <Container>
-                <h2>My Tours Details</h2>
+                <h2 className="primaryColor">My Tours Details</h2>
            <Table responsive bordered hover>
-            <thead>
+            <thead >
                 <tr>
                 <th>#</th>
                 <th>Package Name</th>
                 <th>Phone</th>
                 <th>Date</th>
-                <th>Status</th>
-                <th></th>
+                <th>Size</th>
+                
+                <th> Cancel</th>
                 </tr>
             </thead>
                     {
                         myTours?.map((tour, index) =>
                             <tbody key={ tour._id}>
-                <tr>
+                <tr className="text-secondary">
                 <td>{index+1}</td>
-                <td>{tour?.title}</td>
+                <td className="fw-bold">{tour?.title}</td>
                 <td>{tour?.phone}</td>
                 <td>{tour?.date}</td>
+                <td>{tour?.size}</td>
                 
                 <td>
-                {
-                   tour?.status === 'pending' ? <Button onClick={handleStatus} variant="outline-secondary">{tour?.status}</Button>
-                                                :
-                   <Button variant="outline-success">{tour?.status}</Button>                             
-                }
-                </td>
-                <td>
                  <Button onClick={handleDeleteTour} variant="outline-danger border-0">
-                 <FontAwesomeIcon icon={faTrash}/></Button>
+                 <FontAwesomeIcon icon={faWindowClose}/></Button>
                 </td>
                 </tr>
             </tbody>

@@ -40,7 +40,13 @@ const errorStyle = 'text-danger text-start ms-2';
      <input className={inputStyle} style={{outline: "none"}} placeholder="Phone" {...register("phone", { required: true , pattern: /^\(?([0-9]{5})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{3})$/ })} />
      {errors.phone?.type==='required' && <span className={errorStyle}>This field is required</span>}
      {errors.phone?.type === 'pattern' && <span className={errorStyle}>Input a valid Phone Number</span>}
-                
+     
+     <input  type="number" className={inputStyle} style={{outline: "none"}} placeholder="Number of tickets" {...register("size", { required: true,min: 1 })} />      
+     {errors.size?.type==="required" && <span className={errorStyle}>This field is required</span>}
+          
+     {errors.size?.type === 'min' && <span className={errorStyle}>Input minimum 1 ticket.</span>}
+
+
       <input type="date" className={inputStyle} style={{outline: "none"}} value={date} {...register("date", { required: true })} />
       {errors.date && <span className={errorStyle}>This field is required</span>}
                 

@@ -1,7 +1,7 @@
-import { faUserAlt } from '@fortawesome/free-solid-svg-icons';
+import { faSignOutAlt, faUserAlt } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../Hooks/useAuth';
 
@@ -25,18 +25,28 @@ const NavAll = () => {
             </Nav>
       {/* user  */}
          
-             <Nav>
+             <Nav >
             {user?.email ?
               <div className="d-flex justify-content-center">
-                <img width="40" className="img-fluid rounded-circle" src={user?.photoURL} alt="" /> 
-                <p className="fw-normal m-2">{user?.displayName }</p>
-             <NavDropdown className="border-0" title={icon1} id="collapsible-nav-dropdown">
+                
+                <NavDropdown  title={icon1} id="collapsible-nav-dropdown">
+                  <div className="border-0 p-3">
+                  <div className="d-flex justify-content-center flex-column align-items-center ">
+                <img width="40" height="40" className=" rounded-circle" src={user?.photoURL} alt="" /> 
+                <p className="primaryColor fw-bold m-2">{user?.displayName }</p>
+                </div>
                  <NavDropdown.Item as={Link} to="/myTours">My Tours</NavDropdown.Item>
                  <NavDropdown.Item as={Link} to="/addTours">Add Tours</NavDropdown.Item>
-                     <NavDropdown.Item as={Link} to="/manageTours">Manage Tours</NavDropdown.Item>
+                     <NavDropdown.Item as={Link} to="/manageOrders">Manage Orders</NavDropdown.Item>
                
                  <NavDropdown.Divider />
-                   <NavDropdown.Item onClick={logout}>LogOut</NavDropdown.Item>
+                  
+                    <Button className="w-100" variant="outline-danger" onClick={logout}>
+                    <FontAwesomeIcon icon={faSignOutAlt}/> 
+                    LogOut
+                    </Button>
+                  
+                </div>
                  </NavDropdown>  
               </div> 
              :

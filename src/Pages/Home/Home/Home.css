@@ -1,8 +1,8 @@
 .banner{
-    background-image: url( 'https://i.ibb.co/G3jGz1V/grid.png'),url('https://i.ibb.co/cvDw2f1/bannner.png');
+    background-image: url( 'https://i.ibb.co/G3jGz1V/grid.png');
     background-size: cover;
-    background-repeat: no-repeat;
-    height: 33rem;
+    /* background-repeat: no-repeat; */
+    height: 30rem;
     /* background-color: rgb(255, 252, 206); */
 }
 .bannerCompus{
