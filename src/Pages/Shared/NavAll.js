@@ -19,7 +19,7 @@ const NavAll = () => {
     <Nav className="me-auto">
       <Nav.Link as={Link} to="/home">Home</Nav.Link>
       <Nav.Link as={Link} to="/about">About Us</Nav.Link>
-      <Nav.Link as={Link} to="/package">Tours</Nav.Link>
+      <Nav.Link as={Link} to="/tourPackages">Tours</Nav.Link>
       <Nav.Link as={Link} to="/contact">Contact Us</Nav.Link>
      
             </Nav>

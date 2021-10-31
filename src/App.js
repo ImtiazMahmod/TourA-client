@@ -11,9 +11,11 @@ import PlaceOrder from './Pages/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 import NavAll from './Pages/Shared/NavAll';
 import TourDetails from './Pages/TourPack/TourDetails/TourDetails';
+import TourPack from './Pages/TourPack/TourPack';
 import MyTours from './Pages/User/MyTours/MyTours';
 
 function App() {
+ 
   return (
     <div className="App">
       <AuthProvider>
@@ -28,6 +30,9 @@ function App() {
           </Route>
           <Route path="/about">
             <About/>
+          </Route>
+          <Route path="/tourPackages">
+            <TourPack/>
           </Route>
           <PrivateRoute path="/addTours">
             <AddTours/>

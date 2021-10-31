@@ -10,3 +10,9 @@
   background-color: tomato;
   color: white;
 }
+.spinnerStyle{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: 50% 50%;
+}
